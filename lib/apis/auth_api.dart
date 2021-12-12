@@ -29,7 +29,7 @@ class AuthAPI with ChangeNotifier {
 
       // print(resData['userData']['email']);
       String userEmail = resData['userData']['email'];
-      DateTime expireDate = DateTime.now().add(Duration(seconds: 200));
+      DateTime expireDate = DateTime.now().add(Duration(seconds: 7200));
       // autoLogout();
       notifyListeners();
       final prefs = await SharedPreferences.getInstance();
